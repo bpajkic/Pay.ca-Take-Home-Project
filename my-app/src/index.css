@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background: #f3f4f6;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    height: 100%;
+  }
+  
+  .company-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-item:hover,
+  .nav-item.active {
+    background: #e5e7eb;
+  }
+  
+  .rewards-section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+  }
+  
+  .points {
+    font-weight: bold;
+  }
+  
+  .rewards-link {
+    color: blue;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: calc(100% - 260px);
+  }
+  
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+  }
+  
+  .add-btn {
+    background: #f4a261;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background: #e76f51;
+  }
+  
+  /* Table */
+  .table-container {
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .team-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .team-table th,
+  .team-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+  }
+  
+  .team-table th {
+    background: #f3f4f6;
+  }
+  
+  .menu-cell {
+    position: relative;
+  }
+  
+  .menu-dropdown {
+    position: absolute;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .menu-dropdown button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background: white;
+  }
+  
+  .menu-dropdown button:hover {
+    background: #f3f4f6;
+  }
+  
+  .delete-btn {
+    color: red;
+  }
+  
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 20px;
+  }
+  
+  .user-info {
+    text-align: right;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .company {
+    color: #6b7280;
+    font-size: 14px;
+  }
+  
+  .user-avatar {
+    width: 35px;
+    height: 35px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
