@@ -1,189 +1,178 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9fafb;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background: #f3f4f6;
-    padding: 20px;
-    border-right: 1px solid #ddd;
-    position: fixed;
-    height: 100%;
-  }
-  
-  .company-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .nav-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .nav-item:hover,
-  .nav-item.active {
-    background: #e5e7eb;
-  }
-  
-  .rewards-section {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background: white;
-  }
-  
-  .points {
-    font-weight: bold;
-  }
-  
-  .rewards-link {
-    color: blue;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  /* Main Content */
-  .main-content {
-    margin-left: 260px;
-    padding: 20px;
-    width: calc(100% - 260px);
-  }
-  
-  .content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  
-  .subtitle {
-    color: #6b7280;
-  }
-  
-  .add-btn {
-    background: #f4a261;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-btn:hover {
-    background: #e76f51;
-  }
-  
-  /* Table */
-  .table-container {
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .team-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .team-table th,
-  .team-table td {
-    padding: 12px;
-    border-bottom: 1px solid #e5e7eb;
-    text-align: left;
-  }
-  
-  .team-table th {
-    background: #f3f4f6;
-  }
-  
-  .menu-cell {
-    position: relative;
-  }
-  
-  .menu-dropdown {
-    position: absolute;
-    right: 0;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .menu-dropdown button {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    border: none;
-    background: white;
-  }
-  
-  .menu-dropdown button:hover {
-    background: #f3f4f6;
-  }
-  
-  .delete-btn {
-    color: red;
-  }
-  
-  /* Header */
-  .header {
-    position: fixed;
-    top: 0;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: white;
-    padding: 10px 20px;
-  }
-  
-  .user-info {
-    text-align: right;
-  }
-  
-  .user-name {
-    font-weight: bold;
-  }
-  
-  .company {
-    color: #6b7280;
-    font-size: 14px;
-  }
-  
-  .user-avatar {
-    width: 35px;
-    height: 35px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-weight: bold;
-  }
-  
+  font-family: sans-serif; /* Primary font */
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Header Bar */
+.header {
+  height: 50px;
+  background: #f8f9fa; /* Light gray background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.header-user-info {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.header-user-name {
+  font-size: 14px; /* Text small */
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.header-company {
+  font-size: 12px; /* Text tiny */
+  color: #6b7280;
+  margin: 0;
+}
+
+.header-user-avatar {
+  width: 30px;
+  height: 30px;
+  background: #e1e7ec; /* Light gray background */
+  color: #333;
+  font-size: 12px; /* Text tiny */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ccc; /* Subtle border */
+  flex-shrink: 0;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  background: #f3f4f6;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  height: calc(100vh - 50px); /* Full height minus the header */
+  position: fixed;
+  left: 0;
+  top: 50px; /* Position below the header */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #e5e7eb;
+}
+
+/* Rewards Section */
+.rewards-section {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background: white;
+  font-size: 14px;
+  border-radius: 16px;
+}
+
+.points {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  overflow-y: auto;
+  margin-left: 200px;
+  font-size: 16px;
+}
+
+
+
+/* Table */
+.table-container {
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded medium */
+  overflow: hidden;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table th,
+.team-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.team-table th {
+  background: #f3f4f6;
+}
+
+/* Dropdown Menu */
+.menu-cell {
+  position: relative;
+}
+
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu-dropdown button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: white;
+}
+
+.menu-dropdown button:hover {
+  background: #f3f4f6;
+}
+
+.delete-btn {
+  color: red;
+}
